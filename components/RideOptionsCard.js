@@ -61,7 +61,7 @@ const RideOptionsCard = () => {
               onPress={() => {
                 setSelected(item);
               }}
-              style={tw`flex-row items-center justify-between px-10 ${
+              style={tw`flex-row items-center justify-between px-5 ${
                 id === selected?.id && "bg-gray-200"
               }`}
             >
@@ -73,12 +73,13 @@ const RideOptionsCard = () => {
                 }}
                 source={{ uri: image }}
               />
-              <View style={tw`-ml-6`}>
+              <View style={tw`-ml-0`}>
                 <Text style={tw`text-xl font-semibold`}>{title}</Text>
                 <Text>
-                  {travelTimeInformation?.duration?.text} Trevale time
+                  {travelTimeInformation?.duration?.text} travel time
                 </Text>
               </View>
+
               <Text style={tw`text-xl`}>
                 {new Intl.NumberFormat("en-gb", {
                   style: "currency",
